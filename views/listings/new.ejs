@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WanderLust</title>
+  </head>
+  <body>
+    <form method="post" action="/listings">
+      <h3>Add Listing</h3>
+
+      <label for="title">Title</label>
+      <input
+        id="title"
+        name="title"
+        type="text"
+        placeholder="Cozy Mountain Cabin"
+        required
+      />
+
+      <label for="description">Description</label>
+
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+        placeholder="Beautiful cabin with stunning mountain views"
+        required
+      ></textarea>
+
+      <label for="imageUrl">Image URL</label>
+      <input
+        id="imageUrl"
+        name="imageUrl"
+        type="url"
+        placeholder="https://example.com/photo.jpg"
+      />
+
+      <label for="price">Price (BDT)</label>
+      <input
+        id="price"
+        name="price"
+        type="number"
+        step="1"
+        placeholder="11,00,000"
+        required
+      />
+
+      <label for="country">Country</label>
+      <input
+        id="country"
+        name="country"
+        type="text"
+        placeholder="Bangladesh"
+        required
+      />
+
+      <label for="fullAddress">Full Address</label>
+      <input
+        id="fullAddress"
+        name="fullAddress"
+        type="text"
+        placeholder="123 Mountain Rd, Aspen, CO"
+        required
+      />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
