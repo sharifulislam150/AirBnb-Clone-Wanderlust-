@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form method="post" action="/listings/<%= listing._id %>?_method=PUT  ">
+      <h3>Edit Your Listing</h3>.
+<br>
+      <label for="title">Title</label>
+      <input
+        id="title"
+        name="listing[title]"
+        type="text"
+        value="<%= listing.title %>"
+        required
+      />
+<br>
+      <label for="description">Description</label>
+
+      <textarea
+        id="description"
+        name="listing[description]"
+        rows="4"
+        required
+      ><%= listing.description %></textarea>
+<br>
+      <label for="imageUrl">Image URL</label>
+      <input
+        id="imageUrl"
+        name="listing[imageUrl]"
+        type="url"
+        value="<%= listing.Image %>"
+      />
+<br>
+      <label for="price">Price (BDT)</label>
+      <input
+        id="price"
+        name="listing[price]"
+        type="number"
+        step="1"
+        value="<%= listing.price %>"
+        required
+      />
+<br>
+      <label for="location">Location</label>
+      <input
+        id="country"
+        name="listing[location]"
+        type="text"
+        value="<%= listing.location%>"
+        required
+      />
+<br>
+      <label for="country">Country</label>
+      <input
+        id="country"
+        name="listing[country]"
+        type="text"
+        value="<%= listing.country %>"
+        required
+      />
+<br>
+      <button type="submit">Submit</button>
+    </form>  
+</body>
+</html>
