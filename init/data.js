@@ -836,406 +836,406 @@ const SampleListings = [
     location: "Black Forest",
     country: "Germany"
   },
-  {
-    title: "Historic Home",
-    description: "Beautifully preserved historic property",
-    Image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-    price: 175,
-    location: "Charleston",
-    country: "USA"
-  },
-  {
-    title: "Lakeside Villa",
-    description: "Luxury on the water",
-    Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
-    price: 330,
-    location: "Geneva",
-    country: "Switzerland"
-  },
-  {
-    title: "Desert Retreat",
-    description: "Stunning desert landscapes",
-    Image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
-    price: 185,
-    location: "Arizona",
-    country: "USA"
-  },
-  {
-    title: "Urban Apartment",
-    description: "Perfect for city explorers",
-    Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-    price: 115,
-    location: "Paris",
-    country: "France"
-  },
-  {
-    title: "Mountain Home",
-    description: "Spacious family accommodation",
-    Image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
-    price: 260,
-    location: "British Columbia",
-    country: "Canada"
-  },
-  {
-    title: "Beachfront Condo",
-    description: "Oceanfront luxury",
-    Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
-    price: 275,
-    location: "Hawaii",
-    country: "USA"
-  },
-  {
-    title: "Country Inn",
-    description: "Charming bed and breakfast",
-    Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
-    price: 145,
-    location: "Vermont",
-    country: "USA"
-  },
-  {
-    title: "Modern Loft",
-    description: "Industrial design with luxury finishes",
-    Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-    price: 220,
-    location: "San Francisco",
-    country: "USA"
-  },
-  {
-    title: "Traditional Cabin",
-    description: "Rustic charm and comfort",
-    Image: "https://images.unsplash.com/photo-1475855581690-80accde3ae2b",
-    price: 130,
-    location: "Norway",
-    country: "Norway"
-  },
-  {
-    title: "City Penthouse",
-    description: "Ultimate urban luxury",
-    Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-    price: 420,
-    location: "Singapore",
-    country: "Singapore"
-  },
-  {
-    title: "Mountain View Cottage",
-    description: "Panoramic mountain views",
-    Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
-    price: 155,
-    location: "New Zealand",
-    country: "New Zealand"
-  },
-  {
-    title: "Beach Bungalow",
-    description: "Relaxed tropical living",
-    Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
-    price: 125,
-    location: "Sri Lanka",
-    country: "Sri Lanka"
-  },
-  {
-    title: "Modern Apartment",
-    description: "Sleek contemporary design",
-    Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-    price: 135,
-    location: "Sydney",
-    country: "Australia"
-  },
-  {
-    title: "Country House",
-    description: "Spacious rural property",
-    Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
-    price: 195,
-    location: "Scotland",
-    country: "UK"
-  },
-  {
-    title: "Lakeside Retreat",
-    description: "Peaceful waterfront escape",
-    Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
-    price: 165,
-    location: "Michigan",
-    country: "USA"
-  },
-  {
-    title: "Urban Studio",
-    description: "Efficient city living",
-    Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-    price: 105,
-    location: "Berlin",
-    country: "Germany"
-  },
-  {
-    title: "Mountain Cabin",
-    description: "Cozy winter getaway",
-    Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
-    price: 145,
-    location: "Sweden",
-    country: "Sweden"
-  },
-  {
-    title: "Beach Villa",
-    description: "Luxury beachfront living",
-    Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
-    price: 310,
-    location: "Portugal",
-    country: "Portugal"
-  },
-  {
-    title: "Modern House",
-    description: "Architectural design",
-    Image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
-    price: 280,
-    location: "Austin",
-    country: "USA"
-  },
-  {
-    title: "Traditional Cottage",
-    description: "Charming historic property",
-    Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
-    price: 120,
-    location: "Wales",
-    country: "UK"
-  },
-  {
-    title: "Lakeside Cabin",
-    description: "Fishing and boating paradise",
-    Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
-    price: 150,
-    location: "Finland",
-    country: "Finland"
-  },
-  {
-    title: "City Apartment",
-    description: "Convenient urban location",
-    Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-    price: 125,
-    location: "Madrid",
-    country: "Spain"
-  },
-  {
-    title: "Mountain Retreat",
-    description: "Secluded nature escape",
-    Image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
-    price: 175,
-    location: "Chile",
-    country: "Chile"
-  },
-  {
-    title: "Beach House",
-    description: "Oceanfront luxury",
-    Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
-    price: 295,
-    location: "California",
-    country: "USA"
-  },
-  {
-    title: "Modern Condo",
-    description: "New construction with amenities",
-    Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-    price: 155,
-    location: "Vancouver",
-    country: "Canada"
-  },
-  {
-    title: "Traditional Villa",
-    description: "Classic European style",
-    Image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
-    price: 245,
-    location: "Italy",
-    country: "Italy"
-  },
-  {
-    title: "Forest Cabin",
-    description: "Nature immersion",
-    Image: "https://images.unsplash.com/photo-1448375240586-882707db888b",
-    price: 135,
-    location: "Washington",
-    country: "USA"
-  },
-  {
-    title: "Beachfront House",
-    description: "Direct beach access",
-    Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
-    price: 305,
-    location: "Florida",
-    country: "USA"
-  },
-  {
-    title: "Mountain Cabin",
-    description: "Romantic getaway",
-    Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
-    price: 140,
-    location: "Colorado",
-    country: "USA"
-  },
-  {
-    title: "City View Loft",
-    description: "Stunning urban panoramas",
-    Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-    price: 210,
-    location: "Shanghai",
-    country: "China"
-  },
-  {
-    title: "Country Cottage",
-    description: "Peaceful rural retreat",
-    Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
-    price: 110,
-    location: "England",
-    country: "UK"
-  },
-  {
-    title: "Modern Beach Villa",
-    description: "Contemporary coastal design",
-    Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
-    price: 335,
-    location: "Mexico",
-    country: "Mexico"
-  },
-  {
-    title: "Alpine Chalet",
-    description: "Ski resort access",
-    Image: "https://images.unsplash.com/photo-1519659528534-7fd733d145ac",
-    price: 255,
-    location: "France",
-    country: "France"
-  },
-  {
-    title: "Historic Mansion",
-    description: "Grand historic property",
-    Image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-    price: 190,
-    location: "Virginia",
-    country: "USA"
-  },
-  {
-    title: "Lakeside Mansion",
-    description: "Waterfront luxury estate",
-    Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
-    price: 350,
-    location: "Switzerland",
-    country: "Switzerland"
-  },
-  {
-    title: "Desert Oasis",
-    description: "Unique desert experience",
-    Image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
-    price: 200,
-    location: "Nevada",
-    country: "USA"
-  },
-  {
-    title: "Urban Apartment",
-    description: "Perfect city base",
-    Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-    price: 120,
-    location: "Rome",
-    country: "Italy"
-  },
-  {
-    title: "Mountain Estate",
-    description: "Spacious mountain property",
-    Image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
-    price: 275,
-    location: "Montana",
-    country: "USA"
-  },
-  {
-    title: "Beachfront Condo",
-    description: "Ocean views from every room",
-    Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
-    price: 290,
-    location: "Bahamas",
-    country: "Bahamas"
-  },
-  {
-    title: "Country Inn",
-    description: "Charming accommodation",
-    Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
-    price: 150,
-    location: "New England",
-    country: "USA"
-  },
-  {
-    title: "Modern Loft",
-    description: "Industrial chic design",
-    Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-    price: 235,
-    location: "Los Angeles",
-    country: "USA"
-  },
-  {
-    title: "Traditional Lodge",
-    description: "Rustic comfort and charm",
-    Image: "https://images.unsplash.com/photo-1475855581690-80accde3ae2b",
-    price: 145,
-    location: "Alaska",
-    country: "USA"
-  },
-  {
-    title: "City Penthouse",
-    description: "Ultimate urban luxury",
-    Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-    price: 440,
-    location: "Tokyo",
-    country: "Japan"
-  },
-  {
-    title: "Mountain View Retreat",
-    description: "Breathtaking mountain scenery",
-    Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
-    price: 165,
-    location: "Peru",
-    country: "Peru"
-  },
-  {
-    title: "Beach Bungalow",
-    description: "Tropical paradise",
-    Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
-    price: 130,
-    location: "Philippines",
-    country: "Philippines"
-  },
-  {
-    title: "Modern Apartment",
-    description: "Contemporary urban living",
-    Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-    price: 140,
-    location: "Melbourne",
-    country: "Australia"
-  },
-  {
-    title: "Country Estate",
-    description: "Spacious rural property",
-    Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
-    price: 210,
-    location: "Ireland",
-    country: "Ireland"
-  },
-  {
-    title: "Lakeside Cabin",
-    description: "Peaceful waterfront escape",
-    Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
-    price: 170,
-    location: "Canada",
-    country: "Canada"
-  },
-  {
-    title: "Urban Studio",
-    description: "Efficient city accommodation",
-    Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-    price: 110,
-    location: "Amsterdam",
-    country: "Netherlands"
-  },
-  {
-    title: "Mountain Getaway",
-    description: "Cozy winter retreat",
-    Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
-    price: 150,
-    location: "Austria",
-    country: "Austria"
-  },
+  // {
+  //   title: "Historic Home",
+  //   description: "Beautifully preserved historic property",
+  //   Image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+  //   price: 175,
+  //   location: "Charleston",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Lakeside Villa",
+  //   description: "Luxury on the water",
+  //   Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
+  //   price: 330,
+  //   location: "Geneva",
+  //   country: "Switzerland"
+  // },
+  // {
+  //   title: "Desert Retreat",
+  //   description: "Stunning desert landscapes",
+  //   Image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+  //   price: 185,
+  //   location: "Arizona",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Urban Apartment",
+  //   description: "Perfect for city explorers",
+  //   Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  //   price: 115,
+  //   location: "Paris",
+  //   country: "France"
+  // },
+  // {
+  //   title: "Mountain Home",
+  //   description: "Spacious family accommodation",
+  //   Image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
+  //   price: 260,
+  //   location: "British Columbia",
+  //   country: "Canada"
+  // },
+  // {
+  //   title: "Beachfront Condo",
+  //   description: "Oceanfront luxury",
+  //   Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
+  //   price: 275,
+  //   location: "Hawaii",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Country Inn",
+  //   description: "Charming bed and breakfast",
+  //   Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
+  //   price: 145,
+  //   location: "Vermont",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Modern Loft",
+  //   description: "Industrial design with luxury finishes",
+  //   Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+  //   price: 220,
+  //   location: "San Francisco",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Traditional Cabin",
+  //   description: "Rustic charm and comfort",
+  //   Image: "https://images.unsplash.com/photo-1475855581690-80accde3ae2b",
+  //   price: 130,
+  //   location: "Norway",
+  //   country: "Norway"
+  // },
+  // {
+  //   title: "City Penthouse",
+  //   description: "Ultimate urban luxury",
+  //   Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+  //   price: 420,
+  //   location: "Singapore",
+  //   country: "Singapore"
+  // },
+  // {
+  //   title: "Mountain View Cottage",
+  //   description: "Panoramic mountain views",
+  //   Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
+  //   price: 155,
+  //   location: "New Zealand",
+  //   country: "New Zealand"
+  // },
+  // {
+  //   title: "Beach Bungalow",
+  //   description: "Relaxed tropical living",
+  //   Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+  //   price: 125,
+  //   location: "Sri Lanka",
+  //   country: "Sri Lanka"
+  // },
+  // {
+  //   title: "Modern Apartment",
+  //   description: "Sleek contemporary design",
+  //   Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  //   price: 135,
+  //   location: "Sydney",
+  //   country: "Australia"
+  // },
+  // {
+  //   title: "Country House",
+  //   description: "Spacious rural property",
+  //   Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
+  //   price: 195,
+  //   location: "Scotland",
+  //   country: "UK"
+  // },
+  // {
+  //   title: "Lakeside Retreat",
+  //   description: "Peaceful waterfront escape",
+  //   Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
+  //   price: 165,
+  //   location: "Michigan",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Urban Studio",
+  //   description: "Efficient city living",
+  //   Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+  //   price: 105,
+  //   location: "Berlin",
+  //   country: "Germany"
+  // },
+  // {
+  //   title: "Mountain Cabin",
+  //   description: "Cozy winter getaway",
+  //   Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
+  //   price: 145,
+  //   location: "Sweden",
+  //   country: "Sweden"
+  // },
+  // {
+  //   title: "Beach Villa",
+  //   description: "Luxury beachfront living",
+  //   Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
+  //   price: 310,
+  //   location: "Portugal",
+  //   country: "Portugal"
+  // },
+  // {
+  //   title: "Modern House",
+  //   description: "Architectural design",
+  //   Image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+  //   price: 280,
+  //   location: "Austin",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Traditional Cottage",
+  //   description: "Charming historic property",
+  //   Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
+  //   price: 120,
+  //   location: "Wales",
+  //   country: "UK"
+  // },
+  // {
+  //   title: "Lakeside Cabin",
+  //   description: "Fishing and boating paradise",
+  //   Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
+  //   price: 150,
+  //   location: "Finland",
+  //   country: "Finland"
+  // },
+  // {
+  //   title: "City Apartment",
+  //   description: "Convenient urban location",
+  //   Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  //   price: 125,
+  //   location: "Madrid",
+  //   country: "Spain"
+  // },
+  // {
+  //   title: "Mountain Retreat",
+  //   description: "Secluded nature escape",
+  //   Image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
+  //   price: 175,
+  //   location: "Chile",
+  //   country: "Chile"
+  // },
+  // {
+  //   title: "Beach House",
+  //   description: "Oceanfront luxury",
+  //   Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+  //   price: 295,
+  //   location: "California",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Modern Condo",
+  //   description: "New construction with amenities",
+  //   Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+  //   price: 155,
+  //   location: "Vancouver",
+  //   country: "Canada"
+  // },
+  // {
+  //   title: "Traditional Villa",
+  //   description: "Classic European style",
+  //   Image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+  //   price: 245,
+  //   location: "Italy",
+  //   country: "Italy"
+  // },
+  // {
+  //   title: "Forest Cabin",
+  //   description: "Nature immersion",
+  //   Image: "https://images.unsplash.com/photo-1448375240586-882707db888b",
+  //   price: 135,
+  //   location: "Washington",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Beachfront House",
+  //   description: "Direct beach access",
+  //   Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+  //   price: 305,
+  //   location: "Florida",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Mountain Cabin",
+  //   description: "Romantic getaway",
+  //   Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
+  //   price: 140,
+  //   location: "Colorado",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "City View Loft",
+  //   description: "Stunning urban panoramas",
+  //   Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+  //   price: 210,
+  //   location: "Shanghai",
+  //   country: "China"
+  // },
+  // {
+  //   title: "Country Cottage",
+  //   description: "Peaceful rural retreat",
+  //   Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
+  //   price: 110,
+  //   location: "England",
+  //   country: "UK"
+  // },
+  // {
+  //   title: "Modern Beach Villa",
+  //   description: "Contemporary coastal design",
+  //   Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
+  //   price: 335,
+  //   location: "Mexico",
+  //   country: "Mexico"
+  // },
+  // {
+  //   title: "Alpine Chalet",
+  //   description: "Ski resort access",
+  //   Image: "https://images.unsplash.com/photo-1519659528534-7fd733d145ac",
+  //   price: 255,
+  //   location: "France",
+  //   country: "France"
+  // },
+  // {
+  //   title: "Historic Mansion",
+  //   description: "Grand historic property",
+  //   Image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+  //   price: 190,
+  //   location: "Virginia",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Lakeside Mansion",
+  //   description: "Waterfront luxury estate",
+  //   Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
+  //   price: 350,
+  //   location: "Switzerland",
+  //   country: "Switzerland"
+  // },
+  // {
+  //   title: "Desert Oasis",
+  //   description: "Unique desert experience",
+  //   Image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+  //   price: 200,
+  //   location: "Nevada",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Urban Apartment",
+  //   description: "Perfect city base",
+  //   Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  //   price: 120,
+  //   location: "Rome",
+  //   country: "Italy"
+  // },
+  // {
+  //   title: "Mountain Estate",
+  //   description: "Spacious mountain property",
+  //   Image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
+  //   price: 275,
+  //   location: "Montana",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Beachfront Condo",
+  //   description: "Ocean views from every room",
+  //   Image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
+  //   price: 290,
+  //   location: "Bahamas",
+  //   country: "Bahamas"
+  // },
+  // {
+  //   title: "Country Inn",
+  //   description: "Charming accommodation",
+  //   Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
+  //   price: 150,
+  //   location: "New England",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Modern Loft",
+  //   description: "Industrial chic design",
+  //   Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+  //   price: 235,
+  //   location: "Los Angeles",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "Traditional Lodge",
+  //   description: "Rustic comfort and charm",
+  //   Image: "https://images.unsplash.com/photo-1475855581690-80accde3ae2b",
+  //   price: 145,
+  //   location: "Alaska",
+  //   country: "USA"
+  // },
+  // {
+  //   title: "City Penthouse",
+  //   description: "Ultimate urban luxury",
+  //   Image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+  //   price: 440,
+  //   location: "Tokyo",
+  //   country: "Japan"
+  // },
+  // {
+  //   title: "Mountain View Retreat",
+  //   description: "Breathtaking mountain scenery",
+  //   Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
+  //   price: 165,
+  //   location: "Peru",
+  //   country: "Peru"
+  // },
+  // {
+  //   title: "Beach Bungalow",
+  //   description: "Tropical paradise",
+  //   Image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+  //   price: 130,
+  //   location: "Philippines",
+  //   country: "Philippines"
+  // },
+  // {
+  //   title: "Modern Apartment",
+  //   description: "Contemporary urban living",
+  //   Image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  //   price: 140,
+  //   location: "Melbourne",
+  //   country: "Australia"
+  // },
+  // {
+  //   title: "Country Estate",
+  //   description: "Spacious rural property",
+  //   Image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8",
+  //   price: 210,
+  //   location: "Ireland",
+  //   country: "Ireland"
+  // },
+  // {
+  //   title: "Lakeside Cabin",
+  //   description: "Peaceful waterfront escape",
+  //   Image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
+  //   price: 170,
+  //   location: "Canada",
+  //   country: "Canada"
+  // },
+  // {
+  //   title: "Urban Studio",
+  //   description: "Efficient city accommodation",
+  //   Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+  //   price: 110,
+  //   location: "Amsterdam",
+  //   country: "Netherlands"
+  // },
+  // {
+  //   title: "Mountain Getaway",
+  //   description: "Cozy winter retreat",
+  //   Image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
+  //   price: 150,
+  //   location: "Austria",
+  //   country: "Austria"
+  // },
 
 ];
 

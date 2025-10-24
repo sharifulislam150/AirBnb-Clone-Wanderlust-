@@ -1,19 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hi this is listing</h1>
-    <form action="/listings/new" method="get">
-        <button>Create New Listing</button>
-    </form>
-    <ul>
-      <% for(let listing of allListings){ %>
-      <li><a href="/listings/<%=listing._id%>"><%= listing.title %> </a></li>
-      <% } %>
-    </ul>
-  </body>
-</html>
+<% layout("/layouts/boilerplate") -%>
+<body>
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section with Search -->
+    <section class="hero-section position-relative" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 0 100px;">
+      <div class="container">
+        <div class="text-center text-white mb-5">
+          <h1 class="display-3 fw-bold mb-3">Not sure where to go? Perfect.</h1>
+          <p class="lead fs-4 mb-4">Find incredible places to stay around the world</p>
+          
+          <!-- Search Bar -->
+          <div class="search-box mx-auto p-2 bg-white rounded-pill shadow-lg" style="max-width: 850px;">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-3 col-6">
+                <input type="text" class="form-control border-0 ps-4" placeholder="Anywhere" style="box-shadow: none;">
+              </div>
+              <div class="col-md-3 col-6">
+                <input type="text" class="form-control border-0 border-start" placeholder="Any week" style="box-shadow: none;">
+              </div>
+              <div class="col-md-4 col-8">
+                <input type="text" class="form-control border-0 border-start" placeholder="Add guests" style="box-shadow: none;">
+              </div>
+              <div class="col-md-2 col-4">
+                <button class="btn btn-danger rounded-pill w-100 py-2">
+                  <i class="fas fa-search"></i> Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-5">
+      <!-- Categories Pills -->
+      <div class="categories-section mb-5">
+        <div class="d-flex gap-3 overflow-auto pb-3" style="scrollbar-width: none; -ms-overflow-style: none;">
+          <button class="btn btn-outline-secondary rounded-pill px-4 py-2 flex-shrink-0">
+            <i class="fas fa-umbrella-beach me-2"></i>Beach
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill px-4 py-2 flex-shrink-0">
+            <i class="fas fa-mountain me-2"></i>Mountains
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill px-4 py-2 flex-shrink-0">
+            <i class="fas fa-city me-2"></i>City
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill px-4 py-2 flex-shrink-0">
+            <i class="fas fa-swimming-pool me-2"></i>Amazing pools
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill px-4 py-2 flex-shrink-0">
+            <i class="fas fa-home me-2"></i>Cabins
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill px-4 py-2 flex-shrink-0">
+            <i class="fas fa-tree me-2"></i>Treehouses
+          </button>
+          <button class="btn btn-outline-secondary rounded-pill px-4 py-2 flex-shrink-0">
+            <i class="fas fa-fire me-2"></i>Trending
+          </button>
+        </div>
+      </div>
+
+      <!-- Featured Listings Grid -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <% for (let listing of allListings) { %>
+        <div class="col">
+          <a href="/listings/<%= listing._id %>" class="text-decoration-none">
+            <article class="listing-card">
+              <!-- Image Container -->
+              <div class="position-relative mb-2">
+                <img
+                  src="<%= listing.Image || '/images/default.jpg' %>"
+                  class="img-fluid rounded-3 w-100"
+                  alt="<%= listing.title %>"
+                  style="height: 280px; object-fit: cover;"
+                  loading="lazy"
+                />
+                <!-- Favorite Heart Icon -->
+                <button class="btn btn-sm position-absolute top-0 end-0 m-3 bg-white bg-opacity-75 rounded-circle border-0" style="width: 32px; height: 32px; padding: 0;">
+                  <i class="far fa-heart text-dark"></i>
+                </button>
+              </div>
+              
+              <!-- Listing Info -->
+              <div class="listing-info text-dark">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <h6 class="fw-bold mb-0 flex-grow-1 text-truncate pe-2">
+                    <%= listing.title || 'Untitled Listing' %>
+                  </h6>
+                  <div class="d-flex align-items-center flex-shrink-0">
+                    <i class="fas fa-star text-dark" style="font-size: 0.75rem;"></i>
+                    <span class="ms-1 small">4.89</span>
+                  </div>
+                </div>
+                
+                <p class="text-muted small mb-1 text-truncate">
+                  <%= listing.location || 'Location not specified' %>
+                </p>
+                
+                <p class="text-muted small mb-1">
+                  <%= listing.description ? (listing.description.length > 50 ? listing.description.substring(0, 50) + '...' : listing.description) : 'Explore this amazing place' %>
+                </p>
+                
+                <p class="mb-0 mt-2">
+                  <strong class="text-dark">৳<%= listing.price || 'N/A' %></strong>
+                  <span class="text-muted small"> / night</span>
+                </p>
+              </div>
+            </article>
+          </a>
+        </div>
+        <% } %>
+      </div>
+
+      <!-- Inspiration Section -->
+      <section class="inspiration-section mt-5 pt-5">
+        <h2 class="fw-bold mb-4">Inspiration for future getaways</h2>
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=400" 
+                 class="img-fluid rounded-3 mb-2" 
+                 alt="Beach destination"
+                 style="height: 200px; object-fit: cover; width: 100%;"
+                 loading="lazy">
+            <h6 class="fw-semibold">Beach getaways</h6>
+            <p class="text-muted small">Relax by the ocean</p>
+          </div>
+          <div class="col-md-3 col-6">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" 
+                 class="img-fluid rounded-3 mb-2" 
+                 alt="Mountain escape"
+                 style="height: 200px; object-fit: cover; width: 100%;"
+                 loading="lazy">
+            <h6 class="fw-semibold">Mountain escapes</h6>
+            <p class="text-muted small">Adventure awaits</p>
+          </div>
+          <div class="col-md-3 col-6">
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400" 
+                 class="img-fluid rounded-3 mb-2" 
+                 alt="City views"
+                 style="height: 200px; object-fit: cover; width: 100%;"
+                 loading="lazy">
+            <h6 class="fw-semibold">City experiences</h6>
+            <p class="text-muted small">Urban exploration</p>
+          </div>
+          <div class="col-md-3 col-6">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400" 
+                 class="img-fluid rounded-3 mb-2" 
+                 alt="Unique stays"
+                 style="height: 200px; object-fit: cover; width: 100%;"
+                 loading="lazy">
+            <h6 class="fw-semibold">Unique stays</h6>
+            <p class="text-muted small">Unforgettable places</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>

@@ -1,69 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <form method="post" action="/listings/<%= listing._id %>?_method=PUT  ">
-      <h3>Edit Your Listing</h3>.
-<br>
-      <label for="title">Title</label>
-      <input
-        id="title"
-        name="listing[title]"
-        type="text"
-        value="<%= listing.title %>"
-        required
-      />
-<br>
-      <label for="description">Description</label>
+<% layout("/layouts/boilerplate") -%>
 
-      <textarea
-        id="description"
-        name="listing[description]"
-        rows="4"
-        required
-      ><%= listing.description %></textarea>
-<br>
-      <label for="imageUrl">Image URL</label>
-      <input
-        id="imageUrl"
-        name="listing[imageUrl]"
-        type="url"
-        value="<%= listing.Image %>"
-      />
-<br>
-      <label for="price">Price (BDT)</label>
-      <input
-        id="price"
-        name="listing[price]"
-        type="number"
-        step="1"
-        value="<%= listing.price %>"
-        required
-      />
-<br>
-      <label for="location">Location</label>
-      <input
-        id="country"
-        name="listing[location]"
-        type="text"
-        value="<%= listing.location%>"
-        required
-      />
-<br>
-      <label for="country">Country</label>
-      <input
-        id="country"
-        name="listing[country]"
-        type="text"
-        value="<%= listing.country %>"
-        required
-      />
-<br>
-      <button type="submit">Submit</button>
-    </form>  
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="col-lg-6 mx-auto">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body p-4">
+          <h3 class="fw-bold mb-4 text-center text-dark">Edit Your Listing</h3>
+
+          <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+            
+            <!-- Title -->
+            <div class="mb-3">
+              <label for="title" class="form-label fw-semibold">Title</label>
+              <input
+                id="title"
+                name="listing[title]"
+                type="text"
+                class="form-control rounded-3"
+                value="<%= listing.title %>"
+                placeholder="Enter your listing title"
+                required
+              />
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="description" class="form-label fw-semibold">Description</label>
+              <textarea
+                id="description"
+                name="listing[description]"
+                rows="4"
+                class="form-control rounded-3"
+                placeholder="Describe your place"
+                required
+              ><%= listing.description %></textarea>
+            </div>
+
+            <!-- Image URL -->
+            <div class="mb-3">
+              <label for="imageUrl" class="form-label fw-semibold">Image URL</label>
+              <input
+                id="imageUrl"
+                name="listing[Image]"
+                type="url"
+                class="form-control rounded-3"
+                value="<%= listing.Image %>"
+                placeholder="https://example.com/image.jpg"
+              />
+            </div>
+
+            <!-- Price -->
+            <div class="mb-3">
+              <label for="price" class="form-label fw-semibold">Price (৳ BDT)</label>
+              <input
+                id="price"
+                name="listing[price]"
+                type="number"
+                class="form-control rounded-3"
+                step="1"
+                value="<%= listing.price %>"
+                required
+              />
+            </div>
+
+            <!-- Location -->
+            <div class="mb-3">
+              <label for="location" class="form-label fw-semibold">Location</label>
+              <input
+                id="location"
+                name="listing[location]"
+                type="text"
+                class="form-control rounded-3"
+                value="<%= listing.location %>"
+                placeholder="e.g. Cox’s Bazar"
+                required
+              />
+            </div>
+
+            <!-- Country -->
+            <div class="mb-4">
+              <label for="country" class="form-label fw-semibold">Country</label>
+              <input
+                id="country"
+                name="listing[country]"
+                type="text"
+                class="form-control rounded-3"
+                value="<%= listing.country %>"
+                placeholder="e.g. Bangladesh"
+                required
+              />
+            </div>
+
+            <!-- Submit -->
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-danger px-4 py-2 rounded-4 fw-semibold"
+                style="background-color: #FF385C; border: none;"
+              >
+                Save Changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
-</html>
