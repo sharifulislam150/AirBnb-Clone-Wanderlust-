@@ -11,8 +11,8 @@ const listingSchema = new Schema({
     },
     Image: {
         type: String,
-        default: "https://unsplash.com/photos/gray-wooden-house-178j8tJrNlc",
-        set: (v)=> v ===""? "https://unsplash.com/photos/gray-wooden-house-178j8tJrNlc": v,
+        default: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+        set: (v)=> v ===""? "https://images.unsplash.com/photo-1571896349842-33c89424de2d": v,
     },
     price:{
         type:Number

@@ -7,7 +7,7 @@
         <div class="card-body p-4">
           <h3 class="fw-bold mb-4 text-center text-dark">Edit Your Listing</h3>
 
-          <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+          <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
             
             <!-- Title -->
             <div class="mb-3">
@@ -46,6 +46,7 @@
                 class="form-control rounded-3"
                 value="<%= listing.Image %>"
                 placeholder="https://example.com/image.jpg"
+                required 
               />
             </div>
 
@@ -106,5 +107,6 @@
       </div>
     </div>
   </div>
+  <script src="/js/script.js"></script>
 
 </body>
