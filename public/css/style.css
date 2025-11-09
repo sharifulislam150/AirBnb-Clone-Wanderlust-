@@ -291,3 +291,21 @@ button:hover {
 img {
   will-change: transform;
 }
+
+.card {
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+textarea {
+  resize: none;
+}
+
+.card.review-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
