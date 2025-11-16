@@ -16,7 +16,10 @@
     <!-- Navber includes -->
     <%- include("../includes/navber.ejs") %>
     <!-- Body include -->
-    <div class="container"><%- body %></div>
+    <div class="container">
+        <%- include("../includes/flash.ejs") %>
+        <%- body %>
+    </div>
 
     <!-- Footer includes -->
     <%- include("../includes/footer.ejs") %>
