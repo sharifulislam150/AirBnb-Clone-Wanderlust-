@@ -7,7 +7,7 @@
         <div class="card-body p-4">
           <h3 class="fw-bold mb-4 text-center text-dark">Edit Your Listing</h3>
 
-          <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+          <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data" novalidate class="needs-validation">
             
             <!-- Title -->
             <div class="mb-3">
@@ -38,16 +38,21 @@
 
             <!-- Image URL -->
             <div class="mb-3">
-              <label for="imageUrl" class="form-label fw-semibold">Image URL</label>
+              <label for="imageUrl" class="form-label fw-semibold">Upload New Image (Optional)</label>
               <input
                 id="imageUrl"
                 name="listing[Image]"
-                type="url"
+                type="file"
+                accept="image/png, image/jpg, image/jpeg"
                 class="form-control rounded-3"
-                value="<%= listing.Image %>"
-                placeholder="https://example.com/image.jpg"
-                required 
               />
+              <small class="form-text text-muted">Leave empty to keep the current image</small>
+              <% if (listing.Image && listing.Image.url) { %>
+                <div class="mt-2">
+                  <p class="mb-1"><strong>Current Image:</strong></p>
+                  <img src="<%= listing.Image.url %>" alt="Current listing image" class="img-thumbnail" style="max-width: 200px; max-height: 200px;">
+                </div>
+              <% } %>
             </div>
 
             <!-- Price -->

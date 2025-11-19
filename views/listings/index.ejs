@@ -69,11 +69,12 @@
               <!-- Image Container -->
               <div class="position-relative mb-2">
                 <img
-                  src="<%= listing.Image || '/images/default.jpg' %>"
+                  src="<%= (listing.Image && listing.Image.url) ? listing.Image.url : '/images/default.jpg' %>"
                   class="img-fluid rounded-3 w-100"
                   alt="<%= listing.title %>"
                   style="height: 280px; object-fit: cover;"
                   loading="lazy"
+                  required
                 />
                 <!-- Favorite Heart Icon -->
                 <button class="btn btn-sm position-absolute top-0 end-0 m-3 bg-white bg-opacity-75 rounded-circle border-0" style="width: 32px; height: 32px; padding: 0;">

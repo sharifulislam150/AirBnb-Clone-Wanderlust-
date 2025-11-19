@@ -5,15 +5,19 @@ const Schema = mongoose.Schema;
 const listingSchema = new Schema({
     title:{
         type: String,
-        require: true
+        required: true
     },
     description: {
         type: String,
     },
-    Image: {
-        type: String,
-        default: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
-        set: (v)=> v ===""? "https://images.unsplash.com/photo-1571896349842-33c89424de2d": v,
+    // Image: {
+    //     type: String,
+    //     default: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+    //     set: (v)=> v ===""? "https://images.unsplash.com/photo-1571896349842-33c89424de2d": v,
+    // },
+    Image:{
+        url: String,
+        filename: String
     },
     price:{
         type:Number
@@ -30,6 +34,10 @@ const listingSchema = new Schema({
         ref:"Review",
     },
     ],
+    owner:{
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    }
 });
 
 

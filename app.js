@@ -1,3 +1,6 @@
+if(process.env.NODE_ENV != "production"){
+  require('dotenv').config()
+}
 //require things 01
 const express = require("express");
 const app = express();
@@ -7,12 +10,26 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
+const MongoStore = require('connect-mongo');
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
+const User = require("./models/user.js")
+const flash = require("connect-flash"); 
 
-const listings = require("./routes/listing.js");
-const reviews = require("./routes/review.js");
-const flash = require("connect-flash");
+
+const listingsRouter = require("./routes/listing.js");
+const reviewsRouter = require("./routes/review.js");
+const userRouter =  require("./routes/user.js")
+
+process.env.NODE_OPTIONS = "--tls-min-v1.2";
+
+
+
 //Mongo DB connection 03
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+
+const dbUrl = process.env.ATLASDB_URL;
+
 main()
   .then(() => {
     console.log("Connected to DB");
@@ -22,8 +39,9 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(dbUrl);
 }
+
 
 //Ejs Setup
 app.set("view engine", "ejs");
@@ -33,9 +51,19 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
+// use mongodb connect session
+const store = MongoStore.create({
+  mongoUrl: dbUrl,
+  touchAfter: 24*3600,
+});
+
+store.on("error",(err)=>{
+  console.log("Error in Mongo Session Store", err)
+});
 //use express session
 const sessionOptions ={
-  secret: "MycodeIsPure",
+  store,
+  secret: process.env.SECRET || process.env.SECRET,
   resave: false,
   saveUninitialized:true,
   cookie:{
@@ -45,24 +73,41 @@ const sessionOptions ={
   }
 };
 
+
 //Basic API 04
 app.get("/", (req, res) => {
   res.send("Hi This is Root");
 });
 
+//session middleware
 app.use(session(sessionOptions));
-app.use(flash())
+app.use(flash());
+
+//Authentication Middleware/passport middle ware
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+
 
 app.use((req,res,next)=>{
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
+  res.locals.currentUser = req.user;
   next();
 })
 
+
+
 // Index Route (where show all listing)
 
-app.use("/listings",listings);
-app.use("/listings/:id/reviews", reviews )
+app.use("/listings",listingsRouter);
+app.use("/listings/:id/reviews", reviewsRouter );
+app.use("/", userRouter);
 
 
 

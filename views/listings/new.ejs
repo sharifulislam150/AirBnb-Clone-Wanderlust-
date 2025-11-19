@@ -7,7 +7,7 @@
         <div class="card-body p-4">
           <h3 class="fw-bold mb-4 text-center text-dark">Add a New Listing</h3>
 
-          <form method="POST" action="/listings" novalidate  class="needs-validation">
+          <form method="POST" action="/listings" novalidate  class="needs-validation" enctype="multipart/form-data">
             <!-- Title -->
             <div class="mb-3">
               <label for="title" class="form-label fw-semibold">Title</label>
@@ -38,13 +38,13 @@
 
             <!-- Image URL -->
             <div class="mb-3">
-              <label for="image" class="form-label fw-semibold">Image URL</label>
+              <label for="image" class="form-label fw-semibold">Upload Listing Image.</label>
               <input
                 id="image"
                 name="listing[Image]"
-                type="url"
+                type="file"
                 class="form-control rounded-3"
-                placeholder="https://example.com/photo.jpg"
+                required
               />
               
             </div>
@@ -55,7 +55,7 @@
               <input
                 id="price"
                 name="listing[price]"
-                type=""
+                type="number"
                 class="form-control rounded-3"
                 placeholder="1100000"
                 step="1"
