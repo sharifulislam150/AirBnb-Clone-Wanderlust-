@@ -1,94 +1,282 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
-    <div class="container">
-
-        <!-- Brand -->
-        <a class="navbar-brand fw-bold" href="/listings">
-            <i class="fas fa-airbnb text-danger"></i> airbnd
+<nav class="navbar navbar-light bg-white border-bottom sticky-top">
+  <div class="container py-2">
+    <!-- Mobile Layout (< 992px) -->
+    <div class="d-lg-none w-100">
+      <!-- Top Row: Brand + Airbnb your home + Menu Button -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <a class="navbar-brand fw-bold m-0" href="/listings">
+          <i class="fas fa-airbnb text-danger"></i> airbnd
         </a>
 
-        <!-- Toggle -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-            <span class="navbar-toggler-icon"></span>
+        <!-- Airbnb your home - CENTER HIGHLIGHT -->
+        <a
+          class="btn btn-danger fw-semibold px-3 py-2 rounded-pill"
+          href="/listings/new"
+          style="font-size: 13px"
+        >
+          <i class="fas fa-home me-1"></i> Airbnb your home
+        </a>
+
+        <button
+          class="btn border rounded-pill px-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+        >
+          <i class="fas fa-bars"></i>
         </button>
+      </div>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-
-            <!-- Center Search -->
-            <div class="mx-auto d-none d-lg-flex align-items-center border rounded-pill px-3 py-1 shadow-sm"
-                style="min-width: 320px;">
-                <span class="px-2 fw-bold" style="font-size: 14px;">Anywhere</span>
-                <div class="vr"></div>
-                <span class="px-2 fw-bold" style="font-size: 14px;">Any week</span>
-                <div class="vr"></div>
-                <span class="px-2 text-muted" style="font-size: 14px;">Add guests</span>
-                <button class="btn btn-danger rounded-circle ms-2 p-1" style="width: 32px; height: 32px;">
-                    <i class="fas fa-search text-white" style="font-size: 12px;"></i>
-                </button>
-            </div>
-
-            <ul class="navbar-nav ms-auto align-items-center">
-
-                <!-- Airbnb your home -->
-                <li class="nav-item d-none d-lg-block">
-                    <a class="nav-link fw-semibold px-3 py-2 rounded-pill border" href="/listings/new">
-                        Airbnb your home
-                    </a>
-                </li>
-
-                <% if (currentUser) { %>
-
-                    <!-- Username + User Dropdown -->
-                    <li class="nav-item dropdown ms-3">
-
-                        <a class="nav-link dropdown-toggle d-flex align-items-center border rounded-pill px-3 py-2"
-                            href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
-                            
-                            <!-- Username -->
-                            <span class="fw-semibold me-2"><%= currentUser.username %></span>
-
-                            <!-- User Icon -->
-                            <div class="rounded-circle bg-light d-flex justify-content-center align-items-center"
-                                style="width: 32px; height: 32px;">
-                                <i class="fas fa-user"></i>
-                            </div>
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="#">Messages</a></li>
-                            <li><a class="dropdown-item" href="#">Notifications</a></li>
-                            <li><a class="dropdown-item" href="#">Trips</a></li>
-                            <li><a class="dropdown-item" href="#">Wishlists</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-
-                            <li><a class="dropdown-item" href="/listings/new">Airbnb your home</a></li>
-                            <li><a class="dropdown-item" href="#">Account</a></li>
-                            <li><a class="dropdown-item" href="#">Help</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-
-                            <li><a class="dropdown-item text-danger fw-semibold" href="/logout">Log out</a></li>
-                        </ul>
-
-                    </li>
-
-                <% } else { %>
-
-                    <!-- Not logged in: only Login + Signup button (NO DROPDOWN) -->
-                    <li class="nav-item ms-3">
-                        <a href="/login" class="btn btn-outline-dark px-3 py-2 rounded-pill me-2">
-                            Log in
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/signup" class="btn btn-dark px-3 py-2 rounded-pill">
-                            Sign up
-                        </a>
-                    </li>
-
-                <% } %>
-
-            </ul>
+      <!-- Mobile Search Card -->
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body p-2">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-0 ps-3">
+              <i class="fas fa-search text-muted"></i>
+            </span>
+            <input
+              type="text"
+              class="form-control border-0 ps-2"
+              placeholder="Search destinations"
+              style="font-size: 15px"
+            />
+            <button
+              class="btn btn-danger rounded-circle me-2"
+              style="width: 40px; height: 40px"
+            >
+              <i class="fas fa-sliders-h" style="font-size: 14px"></i>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+
+    <!-- Desktop Layout (≥ 992px) -->
+    <div
+      class="d-none d-lg-flex w-100 align-items-center justify-content-between"
+    >
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold m-0" href="/listings">
+        <i class="fas fa-airbnb text-danger" style="font-size: 20px"></i>
+        <span style="font-size: 24px">airbnd</span>
+      </a>
+
+      <!-- Center Search - SIMPLE DESIGN -->
+      <div class="flex-grow-1 d-flex justify-content-center px-4">
+        <div class="position-relative" style="width: 100%; max-width: 400px">
+          <input
+            type="text"
+            class="form-control border rounded-pill ps-4 pe-5 py-2 shadow-sm"
+            placeholder="Start your search"
+            style="font-size: 14px"
+          />
+          <button
+            class="btn btn-danger rounded-circle position-absolute top-50 end-0 translate-middle-y me-1"
+            style="width: 32px; height: 32px; padding: 0"
+          >
+            <i class="fas fa-search text-white" style="font-size: 12px"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Airbnb your home -->
+        <a
+          class="btn btn-light px-4 py-2 rounded-pill fw-semibold border shadow-sm position-relative overflow-hidden"
+          href="/listings/new"
+          style="font-size: 14px; transition: all 0.3s ease"
+          onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'; this.style.backgroundColor='#f8f9fa';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'; this.style.backgroundColor='#f8f9fa';"
+        >
+          <i class="fas fa-home me-2 text-danger"></i>
+          <span
+            style="
+              background: linear-gradient(90deg, #ff385c 0%, #e61e4d 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            "
+          >
+            Airbnb your home
+          </span>
+        </a>
+
+        <% if (currentUser) { %>
+
+        <!-- Username + User Dropdown -->
+        <div class="dropdown">
+          <a
+            class="nav-link dropdown-toggle d-flex align-items-center border rounded-pill px-3 py-2"
+            href="#"
+            id="userDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+          >
+            <!-- Username -->
+            <span class="fw-semibold me-2"><%= currentUser.username %></span>
+
+            <!-- User Icon -->
+            <div
+              class="rounded-circle bg-light d-flex justify-content-center align-items-center"
+              style="width: 32px; height: 32px"
+            >
+              <i class="fas fa-user"></i>
+            </div>
+          </a>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow"
+            aria-labelledby="userDropdown"
+          >
+            <li><a class="dropdown-item" href="#">Messages</a></li>
+            <li><a class="dropdown-item" href="#">Notifications</a></li>
+            <li><a class="dropdown-item" href="#">Trips</a></li>
+            <li><a class="dropdown-item" href="#">Wishlists</a></li>
+
+            <li><hr class="dropdown-divider" /></li>
+
+            <li>
+              <a class="dropdown-item" href="/listings/new">Airbnb your home</a>
+            </li>
+            <li><a class="dropdown-item" href="#">Account</a></li>
+            <li><a class="dropdown-item" href="#">Help</a></li>
+
+            <li><hr class="dropdown-divider" /></li>
+
+            <li>
+              <a class="dropdown-item text-danger fw-semibold" href="/logout"
+                >Log out</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <% } else { %>
+
+        <!-- Not logged in: only Login + Signup button -->
+        <a
+          href="/login"
+          class="btn btn-outline-dark px-4 py-2 rounded-pill"
+          style="font-size: 14px; border-width: 1px"
+        >
+          Log in
+        </a>
+        <a
+          href="/signup"
+          class="btn btn-dark px-4 py-2 rounded-pill"
+          style="font-size: 14px"
+        >
+          Sign up
+        </a>
+
+        <% } %>
+      </div>
+    </div>
+  </div>
 </nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title fw-bold">Menu</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <% if (currentUser) { %>
+    <!-- Logged In User -->
+    <div class="p-4 border-bottom">
+      <div class="d-flex align-items-center">
+        <div
+          class="rounded-circle bg-secondary d-flex justify-content-center align-items-center me-3"
+          style="width: 48px; height: 48px"
+        >
+          <i class="fas fa-user text-white"></i>
+        </div>
+        <div>
+          <div class="fw-bold"><%= currentUser.username %></div>
+          <a href="#" class="text-decoration-none small">View profile</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action py-3 border-0">
+        <i class="fas fa-envelope me-3"></i>Messages
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 border-0">
+        <i class="fas fa-bell me-3"></i>Notifications
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 border-0">
+        <i class="fas fa-suitcase me-3"></i>Trips
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 border-0">
+        <i class="fas fa-heart me-3"></i>Wishlists
+      </a>
+    </div>
+
+    <div class="border-top my-2"></div>
+
+    <div class="list-group list-group-flush">
+      <a
+        href="/listings/new"
+        class="list-group-item list-group-item-action py-3 border-0"
+      >
+        <i class="fas fa-home me-3"></i>Airbnb your home
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 border-0">
+        <i class="fas fa-cog me-3"></i>Account
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 border-0">
+        <i class="fas fa-question-circle me-3"></i>Help
+      </a>
+    </div>
+
+    <div class="border-top my-2"></div>
+
+    <div class="list-group list-group-flush">
+      <a
+        href="/logout"
+        class="list-group-item list-group-item-action py-3 border-0 text-danger"
+      >
+        <i class="fas fa-sign-out-alt me-3"></i>Log out
+      </a>
+    </div>
+
+    <% } else { %>
+    <!-- Not Logged In -->
+    <div class="p-4">
+      <a
+        href="/signup"
+        class="btn btn-danger w-100 rounded-pill py-3 mb-3 fw-semibold"
+      >
+        Sign up
+      </a>
+      <a
+        href="/login"
+        class="btn btn-outline-dark w-100 rounded-pill py-3 fw-semibold"
+      >
+        Log in
+      </a>
+    </div>
+
+    <div class="border-top my-2"></div>
+
+    <div class="list-group list-group-flush">
+      <a
+        href="/listings/new"
+        class="list-group-item list-group-item-action py-3 border-0"
+      >
+        <i class="fas fa-home me-3"></i>Add your Listing
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-3 border-0">
+        <i class="fas fa-question-circle me-3"></i>Help
+      </a>
+    </div>
+    <% } %>
+  </div>
+</div>
