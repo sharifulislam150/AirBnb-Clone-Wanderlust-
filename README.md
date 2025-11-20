@@ -1,15 +1,3 @@
-Here is a clean, professional **README.md** you can paste directly into your GitHub repo.
-I included:
-✔ Full project overview
-✔ All features
-✔ Tech stack
-✔ Known issues (search not working)
-✔ Deployment info
-✔ How to run locally
-✔ Future improvements
-
----
-
 # **Wanderlust – Airbnb Clone 🏡**
 
 Wanderlust is a full-stack Airbnb-style web application where users can browse, create, edit, and manage property listings.
