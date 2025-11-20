@@ -175,10 +175,3 @@ If you want help or collaboration:
 GitHub: [https://github.com/sharifulislam150](https://github.com/sharifulislam150)
 facebook: https://www.facebook.com/shariful.islam.25162/
 
----
-
-If you want, I can also:
-✅ Create badges (Node, Express, MongoDB, Render etc.)
-✅ Format the README with images/screenshots
-✅ Improve the English or add more professional wording
-Just tell me!
